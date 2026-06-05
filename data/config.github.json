@@ -2,11 +2,11 @@
   "version": "1.0",
   "ai": {
     "provider": "gemini",
-    "model": "gemini-2.0-flash",
+    "model": "gemini-1.5-flash",
     "api_key_env": "GOOGLE_API_KEY",
-    "temperature": 0.3,
-    "max_tokens": 4096,
-    "throttle_sec": 4.5,
+    "temperature": 0.2,
+    "max_tokens": 2048,
+    "throttle_sec": 8,
     "analysis_concurrency": 1,
     "enrichment_concurrency": 1
   },
@@ -49,24 +49,6 @@
       },
       {
         "type": "repo_releases",
-        "owner": "microsoft",
-        "repo": "semantic-kernel",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "openai",
-        "repo": "openai-java",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "flutter",
-        "repo": "flutter",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
         "owner": "vercel",
         "repo": "next.js",
         "enabled": true
@@ -79,52 +61,28 @@
       },
       {
         "type": "repo_releases",
-        "owner": "shadcn-ui",
-        "repo": "ui",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "tanstack",
-        "repo": "query",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
         "owner": "microsoft",
         "repo": "TypeScript",
         "enabled": true
       },
       {
         "type": "repo_releases",
-        "owner": "docker",
-        "repo": "compose",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "traefik",
-        "repo": "traefik",
+        "owner": "flutter",
+        "repo": "flutter",
         "enabled": true
       }
     ],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 40,
-      "min_score": 80
+      "fetch_top_stories": 15,
+      "min_score": 150
     },
     "rss": [
       {
-        "name": "JavaBuilder Blogs",
-        "url": "https://www.javabuilder.online/blogs",
+        "name": "Spring Blog",
+        "url": "https://spring.io/blog.atom",
         "enabled": true,
-        "category": "java-vietnam"
-      },
-      {
-        "name": "JavaBuilder Interview",
-        "url": "https://www.javabuilder.online/interview",
-        "enabled": true,
-        "category": "java-interview"
+        "category": "spring"
       },
       {
         "name": "Baeldung Java",
@@ -137,12 +95,6 @@
         "url": "https://foojay.io/today/feed/",
         "enabled": true,
         "category": "java"
-      },
-      {
-        "name": "Spring Blog",
-        "url": "https://spring.io/blog.atom",
-        "enabled": true,
-        "category": "spring"
       },
       {
         "name": "InfoQ Java",
@@ -193,24 +145,6 @@
         "category": "cloud"
       },
       {
-        "name": "Google Cloud Blog",
-        "url": "https://cloud.google.com/blog/products/application-development/rss/",
-        "enabled": true,
-        "category": "cloud"
-      },
-      {
-        "name": "Kubernetes Blog",
-        "url": "https://kubernetes.io/feed.xml",
-        "enabled": true,
-        "category": "kubernetes"
-      },
-      {
-        "name": "Docker Blog",
-        "url": "https://www.docker.com/blog/feed/",
-        "enabled": true,
-        "category": "docker"
-      },
-      {
         "name": "GitHub Blog",
         "url": "https://github.blog/feed/",
         "enabled": true,
@@ -231,12 +165,6 @@
       {
         "name": "Google AI Blog",
         "url": "https://blog.google/technology/ai/rss/",
-        "enabled": true,
-        "category": "ai"
-      },
-      {
-        "name": "Anthropic News",
-        "url": "https://www.anthropic.com/news/rss.xml",
         "enabled": true,
         "category": "ai"
       },
@@ -266,99 +194,10 @@
       }
     ],
     "reddit": {
-      "enabled": true,
-      "subreddits": [
-        {
-          "subreddit": "java",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 20
-        },
-        {
-          "subreddit": "SpringBoot",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 10
-        },
-        {
-          "subreddit": "microservices",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 10
-        },
-        {
-          "subreddit": "devops",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 20
-        },
-        {
-          "subreddit": "webdev",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 50
-        },
-        {
-          "subreddit": "reactjs",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 30
-        },
-        {
-          "subreddit": "FlutterDev",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 20
-        },
-        {
-          "subreddit": "leetcode",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 30
-        },
-        {
-          "subreddit": "algorithms",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 10
-        },
-        {
-          "subreddit": "SaaS",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 20
-        },
-        {
-          "subreddit": "startups",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 20
-        }
-      ],
+      "enabled": false,
+      "subreddits": [],
       "users": [],
-      "fetch_comments": 5
+      "fetch_comments": 0
     },
     "telegram": {
       "enabled": false,
@@ -380,41 +219,17 @@
       "watchlists": []
     },
     "ossinsight": {
-      "enabled": true,
+      "enabled": false,
       "period": "past_24_hours",
-      "languages": ["All", "Java", "TypeScript", "Python", "Go", "Rust", "Dart"],
-      "keywords": [
-        "java",
-        "spring",
-        "spring boot",
-        "microservice",
-        "gateway",
-        "auth",
-        "identity",
-        "oauth",
-        "jwt",
-        "react",
-        "next",
-        "typescript",
-        "flutter",
-        "ai",
-        "agent",
-        "algorithm",
-        "saas",
-        "lms",
-        "edtech",
-        "crm",
-        "devops",
-        "docker",
-        "kubernetes"
-      ],
+      "languages": ["All"],
+      "keywords": [],
       "min_stars": 10,
-      "max_items": 40
+      "max_items": 10
     }
   },
   "filtering": {
-    "ai_score_threshold": 6.5,
-    "time_window_hours": 48
+    "ai_score_threshold": 7.2,
+    "time_window_hours": 24
   },
   "webhook": {
     "enabled": false,
